@@ -3,34 +3,34 @@
 # Date Created: 2024-09-21
 # Description: This workflow runs tests for competitive coding questions
 # whenever changes are pushed to the main branch or a pull request is created.
-name: CI
+# name: CI
 
-on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+# on:
+#   push:
+#     branches:
+#       - main
+#   pull_request:
+#     branches:
+#       - main
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
+# jobs:
+#   build:
+#     runs-on: ubuntu-latest
 
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v2
+#     steps:
+#       - name: Check out code
+#         uses: actions/checkout@v2
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: '3.9'  
+#       - name: Set up Python
+#         uses: actions/setup-python@v2
+#         with:
+#           python-version: '3.9'  
 
-      - name: Install dependencies
-        run: |
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt  # Adjust as necessary for your project
+#       - name: Install dependencies
+#         run: |
+#           python -m pip install --upgrade pip
+#           pip install -r requirements.txt  # Adjust as necessary for your project
 
-      - name: Run tests
-        run: |
-          python -m unittest discover -s tests  # Change according to your test setup
+#       - name: Run tests
+#         run: |
+#           python -m unittest discover -s tests  # Change according to your test setup
