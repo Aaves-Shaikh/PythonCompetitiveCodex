@@ -15,9 +15,10 @@ Let’s embrace the challenge of mastering DSA together, transforming potential 
 
 
 ## Key Features
-Comprehensive Coverage: Problems categorized by data structures (e.g., arrays, linked lists, trees, graphs) and algorithms (e.g., sorting, searching).
-Python Code: All solutions are provided in Python, making it easy to understand and implement.
-Interview Insights: Tips and insights on how to approach DSA problems in interviews.
+1. Comprehensive Coverage: Problems categorized by data structures (e.g., arrays, linked lists, trees, graphs) and algorithms (e.g., sorting, searching).
+2. Python Code: All solutions are provided in Python, making it easy to understand and implement.
+3. Multiple Solution: Most of the problem will be solved using Brute force method, A better solution, And a optimal solution with the small explanation of the problem and Soln. Requesting all to first try the code on your own and than checkout the solution.
+4. Interview Insights: Tips and insights on how to approach DSA problems in interviews.
 ## 📁 Directory Structure
 ### mathematical
 Copy code
@@ -39,6 +40,12 @@ Copy code
     │   ├── problem1.py
     │   ├── problem2.py
     ├── Graphs/
+    │   ├── problem1.py
+    │   ├── problem2.py
+    ├── Hashing/
+    │   ├── problem1.py
+    │   ├── problem2.py
+    ├── Recursion/
     │   ├── problem1.py
     │   ├── problem2.py
     └── README.md
