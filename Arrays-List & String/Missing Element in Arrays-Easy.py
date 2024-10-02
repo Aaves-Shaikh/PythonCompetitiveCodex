@@ -1,9 +1,9 @@
-# Largest Element in Array 
-# Link to the problem https://www.geeksforgeeks.org/problems/largest-element-in-array4009/0
+# Missing Element in Array 
+# Link to the problem https://www.geeksforgeeks.org/problems/missing-number-in-array1416/1
 # Given an array, arr. The task is to find the largest element in it.
 # Date: 02/10/2024
 # The Problem Consist of two solution. A better Solution and A optimal Solution. 
-# the better Soln
+# the Better Soln
 def missingNumber(n,arr): #better soln 
     num_set=set(arr)
     for i in range(1, n+1):
