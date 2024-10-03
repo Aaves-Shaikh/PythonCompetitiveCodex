@@ -1,6 +1,5 @@
 # Second Largest Element in Array 
-# Link to the problem https://www.geeksforgeeks.org/problems/duplicate-elements/1 
-# Given an array, arr. The task is to find the duplicate elements in array.
+# Given an array, arr. The task is to find the duplicate elements in array if present and remove them.
 # Date: 03/10/2024
 # The Problem Consist of Two solution. A brute force Solution, and a optimal Solution. 
 # Metod1: using the for loop we check if the element is present in the list if no we append it else we move forward
