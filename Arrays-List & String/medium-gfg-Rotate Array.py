@@ -1,9 +1,8 @@
 # Second Largest Element in Array 
 # Link to the problem https://www.geeksforgeeks.org/problems/rotate-array-by-n-elements-1587115621/1 
-# Given an array, arr. The task is to find the largest element in it.
+# Given an array, arr. The task is to rotate the array in anticlock wise direction by d numbers
 # Date: 04/10/2024
 # The Problem Consist of only the optimal Solution. But will add the brute force method and a better solution shortly 
-
 # Note use formula d=d%n to find out how many rotation needs to be done 
 def leftrotate(arr,d):
     n=len(arr)
