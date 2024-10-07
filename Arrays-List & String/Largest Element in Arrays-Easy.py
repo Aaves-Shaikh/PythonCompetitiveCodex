@@ -31,3 +31,4 @@ def max_arr(n,arr):
 n=int(input("Enter the number of unsorted array: "))
 arr=list(map(int,input("Enter the numbers: ").strip().split()))
 max_arr(n,arr)
+# The maximum subarray sum is: 6
