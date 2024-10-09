@@ -21,3 +21,18 @@ def arrayladers(arr):
     print(ans)
 arr=[23,30,34,60,20,10,11,16]
 arrayladers(arr)
+# ==================== Optimal Solution ====================
+def array_Laders(Array):
+  answer=[]
+  max_elem=Array[-1]
+  answer.append(Array[-1])
+  for i in range(len(Array)-1,-1,-1):
+    if Array[i]>max_elem:
+      answer.append(Array[i])
+    print(answer)
+    answer.reverse()  #if the interviewer ask for the reverse order
+    print("from left to right ",answer)
+    answer.sort()  #if the interviewer ask for the sorted order
+    print("In sorted order ", answer)
+Array=[23,30,34,60,20,10,11,16]
+array_leaders(Array)
