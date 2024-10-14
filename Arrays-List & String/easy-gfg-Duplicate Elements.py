@@ -18,3 +18,14 @@ def sortedDuplicate(n,arr):
       print(-1)
 n=9
 arr= [3, 4, 5, 7, 8, 1, 2, 1, 3]
+# Method 2: Better approach using freq of the array 
+def sorted_duplicate(N,Array):
+  freq=[0]*(N+1)
+  for i in range(N):
+    if freq[Array[i]]==0:
+      freq[Array[i]]+=1
+    else:
+      print(Array[i],end=" ")
+   print(-1)
+N=5
+Array=[5,5,3,1,2]
