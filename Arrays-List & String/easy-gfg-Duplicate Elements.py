@@ -29,3 +29,20 @@ def sorted_duplicate(N,Array):
    print(-1)
 N=5
 Array=[5,5,3,1,2]
+
+#Method 3: Optimal solution using Linked list cycle method
+from typing import List
+def findDuplicate(a):
+  slow = nums[0]
+  fast = nums[0]
+  while True:
+    slow = nums[slow]
+    fast = nums[nums[fast]]
+    if slow == fast:
+        break
+    fast = nums[0]
+    while slow != fast:
+      slow = nums[slow]
+      fast = nums[fast]
+    print(slow)
+  a=[1, 3, 4, 2, 3]
