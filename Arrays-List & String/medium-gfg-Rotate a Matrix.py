@@ -3,6 +3,8 @@
 # Given an array. The task is to rotate the array by 90 degrees in an anticlockwise direction.
 # Date: 15/10/2024
 # The Problem Consist of two solutions. Brute force solution,and a optimal Solution. 
+# ==================== Brute force Solution ====================
+from typing import List
 def rotateMatrix(mat):
     n=int(len(mat)**0.5)
     rotated=[]
@@ -15,3 +17,19 @@ mat=[[7, 4, 1],
      [8, 5, 2],
      [9, 6, 3]]
 rotateMatrix(mat)
+
+# ==================== Optimal Solution ====================
+def rotate_Matrix(Matrix):
+    n=len(Matrix)
+    for i in range(n):
+        for j in range(i):
+            Matrix[i][j],Matrix[j][i]=Matrix[j][i],Matrix[i][j]
+    Matrix.reverse()
+    for row in Matrix:
+        print(row)
+if __name__ == "__main__":
+    Matrix=[[7, 4, 1], 
+        [8, 5, 2],
+        [9, 6, 3]]
+    rotate_Matrix(Matrix)   
+    
