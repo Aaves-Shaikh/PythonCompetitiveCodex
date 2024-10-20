@@ -1,6 +1,6 @@
 # Kadane's Algorithm also known as Maximun sub array sum
 # Link to the problem https://www.geeksforgeeks.org/problems/kadanes-algorithm-1587115620/1
-# Given an array, arr. The task is to find the sub array of the element in it.
+# Given an array. The task is to find the sub array of the element in it.
 # Date: 07/10/2024
 # The Problem Consist of three solution. Brute force solution, better Solution, and A optimal Solution. 
 # Method 1 the  Brute Force Method 
