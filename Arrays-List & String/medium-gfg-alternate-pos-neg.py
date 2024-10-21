@@ -32,3 +32,20 @@ def rearragnge(arr):
     print(arr)
 arr=[9, 4, -2, -1, 5, 0, -5, -3, 2]
 rearragnge(arr)
+
+# if numbers of positive elements are equal to number of negative elements 
+def alternatePos_Neg(arr1):
+    pos=[]
+    neg=[]
+    for i in range(len(arr1)):
+        if arr1[i]>=0:
+            pos.append(arr1[i])
+        else:
+            neg.append(arr1[i])
+    for i in range(len(pos)):
+        arr1[2*i]=pos[i]
+    for i in range(len(neg)):
+        arr1[2*i+1]=neg[i]
+    print(arr1)
+arr1=[9, 4, -2, -1, 5, 0, -5, -3, 2]
+alternatePos_Neg(arr1)
