@@ -54,3 +54,20 @@ def majority_elem(Array):
   print(-1)
 Array=[1,1, 8,7,9,56, 90,99,99,99,99,99,99,99,99,99]
 majority_elem(Array)
+
+# we also have one more method using dictionary 
+def majority(array):
+  len=len(array)
+  mp={}
+  for i in arr:
+    if i in mp:
+      mp[i]+=1
+    else:
+      mp[i]=1
+  for keys in mp.keys():
+    if mp[key]>len//2:
+      print("The maximun element is: ",key)
+      return
+    print(-1)
+array=[1,1, 8,7,9,56, 90,99,99,99,99,99,99,99,99,99]
+majority(rray)
