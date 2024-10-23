@@ -31,3 +31,26 @@ def majorityelem(A):
   return
 A=[1,1, 8,7,9,56, 90,99,99,99,99,99,99,99,99,99]
 majorityelem(A)
+
+# method 3: using Mooze voting algo
+def majority_elem(Array):
+  elem=none
+  cnt=0
+  l=len(Array)
+  for i range(l):
+    if cnt==0:
+      cnt=1
+      Array[i]=elem
+    elif elem=Array[i]:
+      cnt+=1
+    else:
+      cnt-=1
+  cnt1=0
+  for i in range(l):
+    if elem==Array[i]:
+      cnt1 +=1
+      print(elem)
+        return 
+  print(-1)
+Array=[1,1, 8,7,9,56, 90,99,99,99,99,99,99,99,99,99]
+majority_elem(Array)
