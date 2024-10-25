@@ -1,6 +1,6 @@
 # Array Laders
 # Link to the problem https://www.geeksforgeeks.org/problems/leaders-in-an-array-1587115620/1
-# Given an array, arr. if the left array is greater than right array.
+# Given an array, if the left array is greater than right array.
 # Date: 09/10/2024
 # The Problem Consist of two solutions. A brute force Solution, and A optimal Solution. 
 # ==================== Brute force Solution ====================
