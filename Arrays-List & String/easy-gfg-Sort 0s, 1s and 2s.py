@@ -28,3 +28,23 @@ print("After sorting:")
 for num in arr:
     print(num, end=" ")
 print()
+
+# method 2:
+def sort012(array):
+    low=0
+    mid=0
+    high=len(array)-1
+    for i in range(len(array)):
+        if array[mid]==0:
+            array[low],array[mid]=array[mid],array[low]
+            low+=1
+            mid+=1
+        elif array[mid]==1:
+            mid+=1
+        elif array[mid]==2:
+            array[high],array[mid]=array[mid],array[high]
+            high-=1
+    print("The sorted arrays are: ",array)
+# array=[0, 1, 0, 1, 1, 2, 2, 1, 2, 0, 2, 0, 1, 0, 1, 1, 2, 2, 0]
+array=[2,0,0,1,2,0,1,1]
+sort012(array)
