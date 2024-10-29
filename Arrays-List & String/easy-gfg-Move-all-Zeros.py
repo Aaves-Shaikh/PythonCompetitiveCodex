@@ -16,3 +16,17 @@ def zero_at_end(arr):
     print(arr)
 arr=[1,2,3,0,4,5,0,0,0,6,0,7,0,9,0]
 zero_at_end(arr)
+
+# Optimal Solution.
+def zeroAtEnd(array):
+    if len(array)!=n:
+        raise Exception("Enter the array same as input value: ")
+    j=0
+    for i in range(len(array)):
+        if array[i]!=0:
+            array[i],array[j]=array[j],array[i]
+            j+=1
+    print(array)
+N=int(input())
+array=list(map(int,input().split()))
+zeroAtEnd(array)
