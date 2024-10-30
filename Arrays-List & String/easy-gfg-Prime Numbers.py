@@ -15,3 +15,16 @@ def isprime(n):
             break
 n=29
 isprime(n)
+Method 2: 
+def is_prime(N):
+    if N<=1:
+        print("Not a prime nunber: ")
+    for i in range(2,int(N**0.5)+1): #this is a better soln, than above as the loop will only traverse till the square root of the number i.e from 2 to 5 only if n is not divisible the loop breaks, here the number of iterations of n has reduce Significantly saving the time complexity
+        if N%i==0:
+            print("This is a prime number: ")
+            break
+        else:
+            print("This is a not prime number: ")
+            break
+n=29
+is_prime(n)
