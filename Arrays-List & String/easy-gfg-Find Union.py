@@ -13,3 +13,12 @@
 A=[4, 5, 6, 5, 7, 5, 2, 1, 65, 3, 22 ]
 B=[1,2,3,4,5,6,7,8,9]
 union(A,B)
+
+# Method 2 optimal solution
+def union1(C,D):
+    union1=list(set(C) | set(B))
+    union1.sort(reverse=True)
+    print(f"The union elements in array A and B are {union1}")
+C=[4, 5, 6, 5, 7, 5, 2, 1, 65, 3, 22 ]
+D=[1,2,3,4,5,6,7,8,9]
+union1(C,D)
