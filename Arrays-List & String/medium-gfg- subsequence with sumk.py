@@ -30,3 +30,18 @@ def max_subaaraysum(A):
     print(maxi)
 A=[-2,-1.-3,4,-1,2,1,-5,-4] 
 maxsubarray_sum(A)
+Optimal Solution
+def maxSubarraySum(array):
+    maxi= -sys.maxsize -1
+    sum=0
+    for i in range(len(array)):
+        sum += array[i]
+        if sum > maxi:
+            maxi=sum
+        if sum<0:
+            sum=0
+        if maxi<0:
+            maxi=0
+    print(maxi)
+array=[-2,-1.-3,4,-1,2,1,-5,-4] 
+maxSubarraySum(array)
