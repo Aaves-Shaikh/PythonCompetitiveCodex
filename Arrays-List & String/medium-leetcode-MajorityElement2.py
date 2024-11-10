@@ -31,3 +31,34 @@ def majority_element(num):
       print("No majority Element")
 num=[1,1,2,2,3,3,3,3,1,1]
 majority_element(num)
+
+# optimal solution: this is similar as the majorityelement with n/2 using the Mooze voting  Algo.
+def majorityelement(array):
+  l=len(array)
+  cnt1,cnt2=0,0
+  ele1,ele2=float('-inf'), float('-inf')
+  for i in range(n):
+    if cn1==0 and el2!=array[i]:
+      cnt1=1
+      ele1=array[i]
+    elif array[i]==ele1:
+      cnt1+=1
+    elif array[i]==ele2:
+      cnt2+=1
+    else:
+      cnt1-=1
+      cnt2-=1
+  ls = []
+  cnt1, cnt2 = 0, 0
+    for i in range(n):
+        if array[i] == ele1:
+            cnt1 += 1
+        if array[i] == ele2:
+            cnt2 += 1
+    mini = int(n / 3) + 1
+    if cnt1 >= mini:
+        ls.append(ele1)
+    if cnt2 >= mini:
+        ls.append(ele2)
+array=[11, 33, 33, 11, 33, 11]
+majorityelement(array)
