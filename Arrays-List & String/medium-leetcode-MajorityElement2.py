@@ -16,6 +16,18 @@ def majorityElement(arr):
           cnt+=1
       if cnt>(n//3):
         ls.append(arr[i])
-  return ls
+  print(ls)
 arr=[1,1,2,2,3,3,3,3,1,1]
 majorityElement(arr)
+
+# Better Solution
+def majority_element(num):
+  v=len(num)
+  counter=counter(arr)
+  for nums,count in counter.items():
+    if count>v//3:
+      print(num)
+    else:
+      print("No majority Element")
+num=[1,1,2,2,3,3,3,3,1,1]
+majority_element(num)
