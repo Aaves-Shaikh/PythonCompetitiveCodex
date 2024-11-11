@@ -21,3 +21,17 @@ def mergeoverlap(arr):
     print(ans)
 arr=[[1, 3], [8, 10], [2, 6], [15, 18]]
 mergeoverlap(arr)
+
+# Method 2 The Optimal Solution
+def mergeOverLap(array):
+    answer=[]
+    array.sort()
+    l=len(array)
+    for i in range(l):
+        if not answer or array[i][0]>answer[-1][1]:
+            answer.append(array[i])
+        else:
+            answer[-1][1]=max(answer[-1][1],array[i][1])
+    print(answer)
+array=[[1, 3], [8, 10], [2, 6], [15, 18],[20,26]]
+mergeOverLap(array)
