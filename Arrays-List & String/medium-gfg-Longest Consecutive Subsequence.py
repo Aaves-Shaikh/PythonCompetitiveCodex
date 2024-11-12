@@ -23,7 +23,7 @@ def longsubsequence(a):
 a = [100, 200, 1, 2, 3, 4]
 longsubsequence(a)
 
-# Method 2 optimal Solution
+# Method 2 better Solution
 def longestsubsequesnce(arr):
   n=len(arr)
   if n==0:
@@ -43,3 +43,23 @@ def longestsubsequesnce(arr):
   print(long)
 arr = [100, 200, 1, 2, 3, 4,5,6,7,8,10 ]
 longestsubsequesnce(arr)
+
+# Method 3 Optimal Solution
+def longestSuccessiveElements(array):
+    if len(array)==0:
+        return 0
+    lngest=1
+    st=set()
+    for i in range(len(array)):
+        st.add(array[i])
+    for it in st:
+        if it -1 not in st:
+            count=1
+            x=it
+            while x+1 in st:
+                x+=1
+                count+=1
+            lngest=max(lngest,count)
+    print(lngest)
+array = [100, 200, 1, 2, 3, 4,5,6,7,8,10 ]
+longestSuccessiveElements(array)
