@@ -22,3 +22,24 @@ def longsubsequence(a):
     print(longest)
 a = [100, 200, 1, 2, 3, 4]
 longsubsequence(a)
+
+# Method 2 optimal Solution
+def longestsubsequesnce(arr):
+  n=len(arr)
+  if n==0:
+        return 0
+  arr.sort()
+  lastsmaller=float('-inf')
+  count=0
+  long=1
+  for i in range(n):
+    if arr[i-1]==lastsmaller:
+      count+=1
+      lastsmaller=arr[i]
+    elif arr[i]!=lastsmaller:
+      cnt=1
+      lastsamller=arr[i]
+    long=max(long,count)
+  print(long)
+arr = [100, 200, 1, 2, 3, 4,5,6,7,8,10 ]
+longestsubsequesnce(arr)
