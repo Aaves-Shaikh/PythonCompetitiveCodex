@@ -58,9 +58,10 @@ def getlongestsubarray(array,x):
   right,left=0,0
   Sum=array[0]
   maxLen=0
-  while right< Len and Sum>x:
-    Sum-=array[left]
-    left+=1
+  while right < n:
+    while left <= right and Sum > k:
+      Sum -= a[left]
+      left += 1
     if Sum ==x:
       maxLen=max(maxLen ,right-left+1)
     right+=1
