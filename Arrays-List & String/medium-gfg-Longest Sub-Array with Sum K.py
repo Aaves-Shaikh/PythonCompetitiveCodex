@@ -51,3 +51,22 @@ def longestSubArray(Array,X):
 Array=[2, 3, 5, 4,1,10, 9,10,11,20,25,]
 X= 25
 longestSubArray(Array,X)
+
+# Optimal solution
+def getlongestsubarray(array,x):
+  Len=len(array)
+  right,left=0,0
+  Sum=array[0]
+  maxLen=0
+  while right< Len and Sum>x:
+    Sum-=array[left]
+    left+=1
+    if Sum ==x:
+      maxLen=max(maxLen ,right-left+1)
+    right+=1
+    if right < n: Sum += a[right]:
+  print(MaxLen)
+array=[5,2, 3, 5, 4,1,10, 9,10,11,20,25,]
+x=30
+getlongestsubarray(array,x)
+
