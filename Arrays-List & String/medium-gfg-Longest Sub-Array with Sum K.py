@@ -10,7 +10,7 @@ def longestsubarray(arr, k):
   for i in range(n):
     for j in range(i,n):
       s=0
-      for k in range(i,j+1):
+      for k in range(i,j+1): # this for loop can be removed to improve the time complexity for brute force solution
         s+=arr[j]
         if s==k:
           longest=max(longest, j-i+1)
@@ -32,3 +32,22 @@ def longsubarray(a,K):
 a=[2, 3, 5, 4,1,10, 9,10,11,20,25,]
 K= 15
 longsubarr(a,K)
+
+# Better solution
+def longestSubArray(Array,X):
+  preSumMap={}
+  Sum=0
+  Maxlen=0
+  for i in range(len(arr)):
+    Sum+=Array[i]
+    if Sum==X:
+      Maxlen=max(Maxlen, i+1)
+    if rem in preSumMap:
+      length=i-preSumMap[rem]
+      Maxlen=max(Maxlen,Length)
+    if Sum not in preSumMap:
+      preSumMap[Sum]=i
+  print("The longest Subarray is ",Maxlen)
+Array=[2, 3, 5, 4,1,10, 9,10,11,20,25,]
+X= 25
+longestSubArray(Array,X)
