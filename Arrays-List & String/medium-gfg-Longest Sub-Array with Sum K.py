@@ -18,3 +18,17 @@ def longestsubarray(arr, k):
 arr=[2, 3, 5, 1, 9]
 k= 10
 longestsubarray(arr,k)
+# slightly better brute force solution
+def longsubarray(a,K):
+  N=len(a)
+  long=0
+  for i in range(n):
+    S=0
+    for j in range(i, n):
+      S+=a[j]
+      if S==K:
+        long=max(long, j-i+1)
+  print(f"The longest subArray is {long}")
+a=[2, 3, 5, 4,1,10, 9,10,11,20,25,]
+K= 15
+longsubarr(a,K)
