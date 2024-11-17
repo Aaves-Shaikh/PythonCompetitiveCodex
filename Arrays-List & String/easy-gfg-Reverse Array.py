@@ -15,3 +15,12 @@ def reversearray(arr):
     print("The reversed arrya is", arr)
 arr=[1,2,3,4,5]
 reversearray(arr)
+
+# Divide and proceed 
+def reverseArray(l)
+    n=len(l)
+    for i in range(n//2):
+        l[i],l[n-i-1]=l[n-i-1],l[i]
+        print(l)
+l=[7,6,5,4,3,2,1]  
+revereArray(l)
