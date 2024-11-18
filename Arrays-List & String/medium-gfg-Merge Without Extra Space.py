@@ -37,3 +37,24 @@ def merge(arr1,arr2):
 arr1=[1, 5, 9, 10, 15, 20]
 arr2=[2, 3, 6, 7, 8, 13]
 merge(arr1,arr2)
+
+# Optimal method[two pointer approach]
+def mergeTwo(a,b):
+    n=len(a)
+    m=len(b)
+    left = n-1
+    right =0
+    while left >=0 and right <m:
+        if a[left]> b[right]:
+            a[left],b[right]=b[right],a[left]
+            left -=1
+            right+=1
+        else:
+            break
+    a.sort()
+    b.sort()
+    print(a)
+    print(b)
+a=[1, 5, 9, 10, 15, 20]
+b=[2, 3, 6, 7, 8, 13]
+mergeTwo(a,b)
