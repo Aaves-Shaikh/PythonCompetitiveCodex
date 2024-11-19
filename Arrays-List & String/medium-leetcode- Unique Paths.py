@@ -16,7 +16,7 @@ def uniquepath(m,n):
 m=3
 n=7
 uniquepath(m,n)
-
+# Better solution using DP
 def countPath(k,l,p,q,dp:[list[list[int]]):
  if i ==(p-1) and l==(q-1):
    print(1)
@@ -36,3 +36,14 @@ def uniquepaths(p,q):
 p=3
 q=7
 uniquepaths(p,q)
+# Optimal Solution
+def unique_path(a,b):
+ N= a+b-2
+ r=b-1
+ res=1
+ for i in range(1, r+1):
+   res=res * (N-r +i)/i
+ print(int(res))
+a=9
+b=4
+unique_path(a,b)
