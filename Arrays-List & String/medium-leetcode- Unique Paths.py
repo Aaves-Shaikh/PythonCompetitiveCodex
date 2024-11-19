@@ -16,3 +16,23 @@ def uniquepath(m,n):
 m=3
 n=7
 uniquepath(m,n)
+
+def countPath(k,l,p,q,dp:[list[list[int]]):
+ if i ==(p-1) and l==(q-1):
+   print(1)
+ if k>=p or l>=q:
+   print(0)
+ if dp[k][l] != -1:
+   return dp[k][l]
+ else:
+   dp[i][j] = self.countPaths( k+1,l,p,q,dp) + self.countPaths(k,l+1,p,q,dp)
+   print(dp[k][l])
+def uniquepaths(p,q):
+ dp=[[-1 for i in range(q+1)] for _ in range(q+1)]
+ num = self.countPath(0,0,p,q,dp)
+ if m==1 and n==1:
+   print(num) 
+ print(dp[0][0])
+p=3
+q=7
+uniquepaths(p,q)
