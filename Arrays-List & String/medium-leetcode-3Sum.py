@@ -17,3 +17,17 @@ def threesum(arr):
   print(ans)
 arr=[-1,0,1,2,-1,-4]
 threesum(arr)
+# ==================== Better Solution ====================
+def threeSum(a):
+  for i in range(len(a)):
+    hashset=set()
+    for j in range(i,len(a)):
+      third=-(a[i] + a[j])
+      if third in hashset:
+        temp = [a[i], a[j], third]
+        temp.sort()
+        st.add(tuple(temp))
+      hashset.add(a[j])
+    ans=list(st)
+a=[-1,0,1,2,-1,-4]
+threeSum(a)
