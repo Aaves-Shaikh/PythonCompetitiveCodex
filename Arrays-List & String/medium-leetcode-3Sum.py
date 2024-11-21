@@ -31,3 +31,27 @@ def threeSum(a):
     ans=list(st)
 a=[-1,0,1,2,-1,-4]
 threeSum(a)
+# ==================== Optimal Solution ====================
+def three_Sum(array):
+  for i in range(len(array)):
+    j=i+1
+    k=len(array)-1
+    while j < k:
+      total_sum = array[i] + array[j] + array[k]
+      if total_sum < 0:
+        j += 1
+      elif total_sum > 0:
+        k -= 1
+      else:
+        temp = [array[i], array[j], array[k]]
+        ans.append(temp)
+        j += 1
+        k -= 1
+                # skip the duplicates:
+        while j < k and array[j] == array[j - 1]:
+          j += 1
+        while j < k and array[k] == array[k + 1]:
+          k -= 1
+      print(ans)
+array= [-1,0,1,2,-1,-4]
+three_Sum(array)
