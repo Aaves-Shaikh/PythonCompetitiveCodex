@@ -6,6 +6,8 @@
 # ==================== Brute force Solution ====================
 from typing import List
 from collections import deque
+import itertools
+
 def quads(arr,target):
    n = len(nums) # size of the array
    st = set()
@@ -25,3 +27,23 @@ def quads(arr,target):
 arr = [4, 3, 3, 4, 4, 2, 1, 2, 1, 1]
 target = 9
 quads(qrr,target)
+# ==================== Better Solution ====================
+def fourSum(nums, target):
+    n = len(nums)
+    st = set()
+    for i in range(n):
+        for j in range(i+1, n):
+            hashset = set()
+            for k in range(j+1, n):
+                sum_ = nums[i] + nums[j] + nums[k]
+                fourth = target - sum_
+                if fourth in hashset:
+                    temp = [nums[i], nums[j], nums[k], fourth]
+                    temp.sort()
+                    st.add(tuple(temp))
+                hashset.add(nums[k])
+    ans = [list(t) for t in st]
+    print(ans)
+nums = [4, 3, 3, 4, 4, 2, 1, 2, 1, 1]
+target = 9
+fourSum(nums, target)
