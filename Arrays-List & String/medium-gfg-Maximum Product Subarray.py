@@ -45,3 +45,17 @@ def max_product_array(array):
   print(ans)
 array=[1, 2, -3, 0, -4, -5]
 max_product_array(array)
+
+# Method4 the optimal solution using kadane's algorithm 
+def max_productarray(a):
+  prod1 = a[0]
+  prod2 = a[0]
+  answer = a[0]
+  for i in range(len(a)):
+    temp = max(a[i], prod1 * a[i], prod2 * a[i])
+    prod2= min(a[i], prod1* a[i], prod 2 *a[i])
+    prod1=temp
+
+   answer=max(answer, prod1)
+a=[1, 2, -3, 0, -4, -5]
+max_productarray(a)
