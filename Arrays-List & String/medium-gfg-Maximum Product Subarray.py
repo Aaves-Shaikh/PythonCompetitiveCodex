@@ -29,3 +29,19 @@ def maxProductArray(arr):
 arr=[1, 2, -3, 0, -4, -5, -7]
 maxProductArray(arr)
 
+# Method 3 The optimal solution without kadane's algorithm 
+def max_product_array(array):
+  n=len(array)
+  ans=float('-inf')
+  pre,suf=1,1
+  for i in range(n):
+    if pre==0:
+      pre=1
+    if suf==0:
+      suf=1
+    pre *= array[i]
+    suf *= array[n-i-1]
+  ans=max(ans, max(pre ,suf))
+  print(ans)
+array=[1, 2, -3, 0, -4, -5]
+max_product_array(array)
