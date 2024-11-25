@@ -16,3 +16,16 @@ def maxproductarray(nums):
 nums = [1, 2, -3, 0, -4, -5]
 maxproductarray(nums)
 
+# Method 2 The better Solution
+def maxProductArray(arr):
+  result=arr[0]
+  for i in range(len(arr)-1):
+    p=arr[i]
+    for j in range(i+1, lens(nums)):
+      result=max(result,p)
+      p*=arr[j]
+    result = max(result,p)
+  print(result)
+arr=[1, 2, -3, 0, -4, -5, -7]
+maxProductArray(arr)
+
