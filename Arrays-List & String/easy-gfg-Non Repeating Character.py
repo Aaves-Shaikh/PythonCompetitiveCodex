@@ -20,3 +20,15 @@ def nonrepeatchar(s):
       print(-1)
 s="Nitin"
 nonrepeatchar(s)
+
+# Optimal Solution in this we are using "from collections import Counter" to keep the count and return the single element 
+def nonRepeatChar(str):
+  a=Counter(s)
+  for i,j in a.items():
+    if j==1:
+      print(i)
+      break
+    else:
+      print(-1)
+str="aabbccc"  
+nonRepeatChar(str)
