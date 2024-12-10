@@ -18,3 +18,19 @@ def minremove(arr):
   print("The minimum number of intervals needs to remove: ",cnt)
 arr=[[1, 2], [2, 3], [3, 4], [1, 3]]
 minremove(arr)
+
+# Method 2: using lambda function
+def minRemove(array):
+   intervals.sort(key=lambda x: x[1])
+   end = float('-inf')
+   count = 0
+   for start, finish in intervals:
+     if start < end:
+       count += 1
+     else:
+       end = finish
+    print("The minimum number of intervals needs to remove: ",count)
+array=[[1, 2], [5, 10], [18, 35], [40, 45]]
+minRemove(array)
+
+
