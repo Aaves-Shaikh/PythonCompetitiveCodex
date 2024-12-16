@@ -32,3 +32,14 @@ a= [2, 3, 6, 7, 9]
 b= [1, 4, 8, 10]
 k = 5
 kthElement(a,b,k)
+
+# Method 2
+def kth_element(arr1, arr2, X):
+  c = a+b
+  c = sorted(c)
+  # print(c)
+  return c[k-1]
+arr1== [100, 112, 256, 349, 770]
+arr2= [72, 86, 113, 119, 265, 445, 892] 
+X = 7
+kth_element(arr1, arr2, X)
