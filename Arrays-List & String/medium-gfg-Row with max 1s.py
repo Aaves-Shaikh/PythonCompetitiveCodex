@@ -20,3 +20,17 @@ def rowWithMax1s(arr):
     print("The maximum row's with 1 is: ",max_row_index)
 arr=[[0,1,1,1], [0,0,1,1], [1,1,1,1], [0,0,0,0]]
 rowWithMax1s(arr)
+
+# Method2 Better solution
+def row_with_max1s(nums):
+  n = len(nums)
+  max_row = -1
+  max_count = 0
+  for number in range(n):
+    count=arr[number].count(1)
+    if count>max_count:
+      max_count=count
+      max_row = number
+  print("The row number with max 1's is: ",max_row)
+nums=[[0,0], [1,1]]
+row_with_max1s(nums)
