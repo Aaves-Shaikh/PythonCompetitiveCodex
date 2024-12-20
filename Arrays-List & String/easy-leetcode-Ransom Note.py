@@ -18,3 +18,23 @@ def canConstruct(ransomNote, magazine):
 ransomNote= "aa"
 magazine= "ab"
 canConstruct(ransomNote, magazine):
+# Optimal Solution
+
+def canConstruct(self, ransomNote, magazine):
+  found = False
+        # ransomNote from magazine
+  for letter_a in ransomNote:
+    for i,letter_b in enumerate(magazine):
+      if letter_a==letter_b:
+        magazine =
+        found = True
+        break
+      if not found:
+          print("False")
+      else:
+          found = False
+      print("True")
+            
+ransomNote= "aa"
+magazine= "aab"
+canConstruct(ransomNote, magazine):  
