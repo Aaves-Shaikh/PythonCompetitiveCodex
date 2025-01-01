@@ -22,3 +22,23 @@ def longestsubStr(s):
       print("The length of longest substring is ",len(global_sub))
 s="abcdefabcbb"
 longestsubStr(s)
+# Optimal Method: 
+
+def longestUniqueSubstr(self, s):
+        # code here
+  max_len = 0
+  c1 = defaultdict(int)
+  count = 0
+  j = 0
+  for i in range(len(s)):
+    c1[s[i]] += 1
+    if c1[s[i]] > 1:
+      count = 0
+      while c1[s[i]] != 1:
+        c1[s[j]] -= 1
+        j += 1
+        max_len = max(max_len, i-j + 1)
+        print(max_len)
+s="abcdefabcbb"
+longestUniqueSubstr(s)        
+        
