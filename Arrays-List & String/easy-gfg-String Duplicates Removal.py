@@ -3,7 +3,7 @@
 # Given a string s which may contain lowercase and uppercase characters. The task is to remove all duplicate characters from the string and find the resultant string
 # The order of remaining characters in the output should be same as in the original string.
 # Date: 02/01/2025
-# Method 1: 
+# Method 1 Brute Force : 
 def removeDuplicates(str):
   a=[]
   seen=set()
@@ -14,3 +14,15 @@ def removeDuplicates(str):
   print("The string after removal of duplicate elements is:", "".join(a))
 str = "HaPpyNewYear"
 removeDuplicates(str)
+
+# Optimal Solution
+def removeduplicateStr(s):
+  ch = [0] * 256
+  result = []
+  for chr in s:
+    if ch[ord(char)] ==0:
+      result.append(char)
+      ch[ord(char)] += 1
+  print("The string after removal of duplicate elements is:", "".join(result))
+s="ThereARESOMaNystrInG"
+removeduplicateStr(s)
