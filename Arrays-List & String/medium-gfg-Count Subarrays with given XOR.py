@@ -19,3 +19,18 @@ def subarraywithxork(a ,k):
 a=   [4, 2, 2, 6, 4]
 k = 6
 subarraywithxork(a ,k)
+
+# Better Solution
+def subarrayWithXorK(array, target):
+  N = len(array)
+  cnt = 0
+  for I in range(N):
+    Xorr = 0 
+    for J in range(I,N):
+      xor = xor ^ array[J]
+      if (xor  == target):
+        cnt += 1
+ print("The total number of xor element with subarray K is", cnt)
+array = [5, 6, 7, 8, 9]
+target = 5
+subarrayWithXorK(array, target)
