@@ -25,3 +25,18 @@ def countTriplets(arr, target):
 arr=  [-3, -1, -1, 0, 1, 2]
 target=  -2
 countTriplets(arr, target)
+
+# Better solution: 
+ def counttriplets(array, tar):
+   sm1={}
+   sm2={}
+   ret=0
+   for ve in array:
+      ret+=sm2.get(tar-ve,0)
+      for v in sm1:
+          sm2[v+ve]=sm2.get(v+ve,0)+sm1.get(v,0)
+          sm1[ve]=sm1.get(ve,0)+1
+  print("There are total ", ret,"values of i j and k that equal to sum")
+array= [-2, 0, 1, 1, 5]
+tar = 1
+counttriplets(array, tar)
