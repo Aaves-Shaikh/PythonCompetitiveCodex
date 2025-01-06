@@ -15,3 +15,17 @@ def twosums(arr,target):
 arr=[2,7,11,15]
 target = 9
 twosums(arr,target)
+
+# Optimal Solution 
+def twoSums(array,tar):
+  hashset= set()
+  pair=[]
+  for num in (array):
+    j = num -target
+    if j in hashset:
+      pair.append((num,j))
+    hashset.add(num)
+  print(pair)
+array=[2,7,11,15]
+tar = 9
+twoSums(array,tar)
