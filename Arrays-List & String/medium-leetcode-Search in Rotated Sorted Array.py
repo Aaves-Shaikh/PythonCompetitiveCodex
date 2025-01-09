@@ -14,3 +14,29 @@ def searchArr(arr, target):
 arr = [7, 8, 9, 1, 2, 3, 4, 5, 6]
 target = 2
 searchArr(arr, target)
+
+# Optimal Solution
+
+def searcharr(array, tar):
+  N = len(array)
+  low = 0 
+  high =  N - 1
+  while low <= high:
+    mid = (low + high)//2
+    if array[mid] == tar:
+      print("The number in the rotated array found at the index" ,mid)
+    elif array[low] <= array[mid] :
+      if array[low] <= tar and tar <= array[mid]:
+        high = mid - 1
+      else:
+        low  = mid + 1
+    elif array[mid] <= array[high]:
+      if array[low] <= tar and tar <= array[high]:
+        low = mid + 1
+      else:
+        high = mid - 1
+    else:
+       print(f"The number {target}, is no where to be found  in the arr")
+array = [4,5,6,7,0,1,2]
+tar = 3
+searcharr(array, tar)
