@@ -4,7 +4,7 @@
 # Date: 10/01/2025
 # This problem consist of three solution, Brute force, better solution and optimal solution
 # brute force method
-
+from collections import defaultdict
 def subarraysum(arr, tar):
   n = len(arr)
   c = 0
@@ -32,3 +32,20 @@ def subArraysum(array, target):
 array = [3, 1, 2, 4]
 target = 6
 subArraysum(array, target)
+
+# Optimal Solution 
+def subArraySum(nums, k):
+  N= len(nums)
+  mpp = defaultdict(int)
+  preSum = 0
+  count = 0
+  mpp[0] = 1
+  for i in range(N):
+    preSum += nums[i]
+    remove = preSum- k
+    count += mpp[remove]
+    mpp[preSum] += 1
+  print(" The total number of subarrays whose sum equals to k are: ",count)
+nums = [1,2,3]
+k = 3 
+subArraySum(nums, k)
