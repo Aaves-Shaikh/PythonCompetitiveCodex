@@ -13,7 +13,22 @@ def subarraysum(arr, tar):
       sub_arraysum = sum(arr[i: j+1])
       if sub_arraysum == tar:
         cnt += 1
-  print(" The total number of subarrays whose sum equals to k are: ", 
+  print(" The total number of subarrays whose sum equals to k are: ", cnt)
 arr = [1,1,1]
 tar = 2
 subarraysum(arr, tar)
+
+# Better Solution
+def subArraysum(array, target):
+  l = len(array)
+  c = 0
+  for i in range(n):
+    subarray_sum = 0
+    for j in range(i, n):
+      subarray_sum += arr[j]
+    if subarray_sum == target:
+      c += 1
+  print(" The total number of subarrays whose sum equals to k are: ", cnt)
+array = [3, 1, 2, 4]
+target = 6
+subArraysum(array, target)
