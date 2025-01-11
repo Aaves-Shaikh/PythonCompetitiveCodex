@@ -15,7 +15,7 @@ def product_arr(nums):
 nums=[1,2,3,4]
 product_arr(nums)
 
-# Optimal Solution
+# Better Solution
 def productArray(arr):
     n = len(arr)
     if n == 0:
@@ -44,3 +44,21 @@ def productArray(arr):
 arr = [5, 6, 7, 9]
 result = productArray(arr)
 print("The final product array is:", result)
+
+def productOfArray(arr):
+    Len = len(arr)
+    left_arr = [1]* Len
+    right_arr = [1]* Len
+    left_mul = 1
+    right_mul = 1
+    for i in range(Len):
+        j = -i -1
+        left_arr[i] = left_mul
+        right_arr[j] = right_mul
+        left_mul *= arr[i]
+        right_mul *= arr[j]
+    return[l,r for l,r in zip(left_arr, right_arr)]
+arr=[5 ,3,2,1,6]
+res = productOfArray(arr)
+print("The final product array is:", res)
+    
