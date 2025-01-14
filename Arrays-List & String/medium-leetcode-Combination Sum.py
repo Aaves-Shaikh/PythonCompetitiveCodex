@@ -8,7 +8,7 @@ def combinationsum(candidate, target):
     ans=[]
     ds=[]
     def findcombination(index, target):
-        if index=len(candidate):
+        if index == len(candidate):
             if target==0:
                 ans.append(ds[:])
             return
@@ -18,7 +18,9 @@ def combinationsum(candidate, target):
                 ds.pop()
             findcombination(index+1, target)
         findcombination(0, target)
-        print("All the possible sums equal to target are: ",ans)
- candidate = [2,3,6,7]
- target = 7
- combinationsum(candidate, target)
+        return ans
+candidate = [2,3,6,7]
+target = 7
+combinationsum(candidate, target)
+ans = combinationsum(candidate, target)
+print("All the possible sums equal to target are:", ans)
