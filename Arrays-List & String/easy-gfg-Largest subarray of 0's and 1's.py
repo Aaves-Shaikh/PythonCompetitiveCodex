@@ -25,3 +25,18 @@ def maxlen(arr):
 arr=[1, 0, 1, 1, 1, 0, 0]
 maxlen(arr)
       
+# Better Solution
+ def maximumLen(array):
+   n = len(array)
+   preSum = {0:-1}
+   currSum = 0
+   ans = 0
+   for i in range(n):
+     currSum+= (1 if arr[i] else -1)
+     if currSum in preSum:
+       ans=max(ans,i-preSum[currSum])
+    if currSum not in preSum:
+      preSum[currSum]=i
+  print("The amximum length of Largest subarray of 0's and 1's is: ", ans)
+array = [0, 0, 1, 1, 0]
+maximumLen(array)
