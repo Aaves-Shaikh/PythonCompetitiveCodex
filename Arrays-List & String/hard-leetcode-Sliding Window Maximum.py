@@ -20,4 +20,20 @@ k = 3 #output [3, 3, 5, 5, 6]
 maxslidingwindow(arr,k):
 # This is not a good solution as it takes two loops and have a large time complexity 
 
-  
+#Better approch
+def maxSliding_Window(array, X):
+  Len = len(array)
+  result  = []
+  q = deque()
+  for ind, nums in enumerate(array):
+    while q and q[-1]  < nums:
+      q.pop()
+    q.append(nums)
+    if ind >= X and nums[ind - X] == q[0]:
+      q.popleft()
+    if ind >= X -1:
+      result.append(q[0])
+  print(result)
+array = [1, 3, -1, -3, 5, 3, 6, 7]
+X = 3
+maxSliding_Window(array, X)
