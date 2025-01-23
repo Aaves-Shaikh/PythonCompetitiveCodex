@@ -28,3 +28,23 @@ def findkthlargest(array, L):
 array= [3,2,3,1,2,4,5,5,6]
 L = 4
 findkthlargest(array, L)
+
+# Optimal solution using quicksort:
+
+def findKthLargest(nums, x):
+  x= len(nums)-x
+  def quicksortselect(l,r):
+    pivot, p  = nums[r], l
+    for i in range(l,r):
+      if nums[i] <= pivot:
+        nums[p],nums[i]=nums[i],nums[p]
+        p+=1
+    nums[p],nums[r] = nums[r], nums[p]
+    if p > x: return quicksortselect(l,p-1)
+    elif p < x: return quicksortselect(p+1, r)
+    else: return nums[p]
+  result = quicksortselect(0,len(nums) -1 )       
+  print(result)
+nums =  [3,2,3,1,2,4,5,5,6]
+x = 3
+findKthLargest(nums, x)  #output  = 5
