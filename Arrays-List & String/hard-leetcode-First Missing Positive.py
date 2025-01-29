@@ -18,3 +18,16 @@ def firstmissing(arr):
    print("The first missing positive number is: ", target)
 arr = [3,4,-1,1]
 firstmissing(arr) # output = 2
+
+def firstMissing(nums):
+  for n in nums:
+    idx = abs(n) - 1
+    if idx < len(nums) and nums[idx] > 0:
+      nums[idx] *= -1
+  for i in range(len(nums)):
+    if nums[i] > 0:
+      print(i +1)
+      return
+  print(len(nums) + 1)
+nums = [1,2,4,0]
+firstMissing(nums) # output = 3
